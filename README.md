@@ -110,3 +110,42 @@ Files are only saved once per unique version
 Unchanged files use hard links
 
 Deduplication via content-addressable storage (future scope)
+
+
+🔹 Initialization & First Commit
+bash
+Copy
+Edit
+$ mkdir project && cd project
+$ ../src/mygit init
+Initialized empty repository
+
+$ echo "Hello World" > file.txt
+$ ../src/mygit add .
+$ ../src/mygit commit -m "Initial commit"
+[master (root-commit) a1b2c3d4] Initial commit
+
+
+🔹 Commit History View
+bash
+Copy
+Edit
+$ ../src/mygit log
+Commit ID:    d70164da
+Commit Msg:   Added feature X
+Date & Time:  2025/08/01 14:30:22
+============================
+
+Commit ID:    a1b2c3d4
+Commit Msg:   Initial commit
+Date & Time:  2025/08/01 14:22:10
+============================
+
+
+🔹 Reverting to Previous Version
+bash
+Copy
+Edit
+$ ../src/mygit revert d70164da
+Successfully reverted to commit: d70164da
+Working directory restored to previous state

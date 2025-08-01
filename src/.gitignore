@@ -1,0 +1,6 @@
+mygit.exe
+# .gitignore
+*.exe
+*.log
+*.tmp
+.DS_Store
